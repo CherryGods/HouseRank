@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <package name="defalut" extends="struts-default">
+        <action name="login"  class="org.cherrygods.action.LoginAction" method="execute">
+            <result name="success" type="redirectAction">show</result>
+            <result name="error">/pages/login.jsp</result>
+        </action>
+        <action name="show" class="org.cherrygods.action.ShowHouseAction" method="execute">
+            <result name="success">/pages/houseManage.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
+        <action name="update" class="org.cherrygods.action.UpdateHouseInfo" method="execute">
+            <result name="success" type="redirectAction">show</result>
+            <result name="error">index.jsp</result>
+        </action>
+        <action name="delete" class="org.cherrygods.action.DeleteHouseAction" method="execute">
+            <result name="success" type="redirectAction">show</result>
+        </action>
+    </package>
+
+</struts>
